@@ -1,0 +1,27 @@
+[
+    { "user": "Pablo", 
+    "pass": "pablo1234", 
+    "admin": false, 
+    "online": true 
+    },
+    { "user": "Pedro", 
+    "pass": "pedro1234", 
+    "admin": false, 
+    "online": false 
+    },
+    { "user": "Yesica", 
+    "pass": "yesi1234", 
+    "admin": false, 
+    "online": true 
+    },
+    { "user": "Enzo", 
+    "pass": "enzo1234", 
+    "admin": true, 
+    "online": true 
+    }
+]
+
+
+
+
+

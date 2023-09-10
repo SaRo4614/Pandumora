@@ -1,0 +1,355 @@
+:root {
+    --blanco: #FFF;
+    --grisClaro: #CDCDCD;
+    --grisOscuro: #9B9B9B;
+    --negro: #000;
+    --violeta: #89119D;
+    --celeste: #00FFFF;
+
+    --fuentePrincipal: 'Righteous', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    margin: 0;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+/** Globales **/
+body {
+    background-image: url(../img/0.jpeg);
+    backdrop-filter: blur(10px) brightness(90%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3, h4 {
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--fuentePrincipal);
+}
+.titulo {
+    font-size: 8rem;
+    margin: 0.67em 0;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--negro);
+    font-family: sans-serif;
+}
+h4 {
+    font-size: 1.6rem;
+}
+@media (max-width: 528px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+header {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+/** Navegacion **/
+.navegacion {
+    display: flex;
+    background-color: var(--grisClaro);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--grisOscuro);
+}
+@media (min-width: 520px) {
+    .navegacion {
+        padding: 1rem 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8rem;
+        width: 50%;
+        border-radius: 50px;
+        margin: 0 auto;
+    }
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--violeta);
+}
+
+.btn__carrito {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/**Footer**/ 
+.footer,
+.instagram {
+    margin-top: 16rem;
+    margin-bottom: 0;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--violeta);
+}
+.footer__tupedido,
+.instagram__tupedido {
+    margin-top: 20.5rem;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--violeta);
+}
+@media (min-width: 480px) {
+    .footer__tupedido,
+    .instagram__tupedido {
+        margin-top: 8.5rem;
+        font-family: var(--fuentePrincipal);
+        text-align: center;
+        font-size: 1.5rem;
+        color: var(--violeta);
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }  
+}
+.grid__retratos {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .grid__retratos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+.grid__diseños {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 6rem;
+}
+@media (min-width: 768px) {
+    .grid__diseños {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }  
+}
+
+/**Productos**/
+.producto {
+    background-color: var(--grisClaro);
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 3px var(--negro);
+    border-radius: 5px;
+}
+.producto__imagen {
+    border-radius: 5px;
+}
+.producto__imagen__cuenco {
+    height: 240px;
+}
+
+.producto__nombre {
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+.producto__tamaño {
+    font-family: var(--fuentePrincipal);
+    margin: 0 0 0.15rem 0;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    color: var(--blanco);
+}
+.producto__todopasa {
+    grid-column: 2/3;
+}
+.producto__nombremandalas,
+.producto__nombreretrato,
+.producto__nombrediseño {
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    margin: 2rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.instagram {
+    margin-top: 26rem;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/** Formulario **/
+.formulario {
+    background-color: var(--grisOscuro);
+    width: 50%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    height: 425px;
+}
+.campo {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    color: var(--blanco);
+    margin: 0.5rem auto;
+}
+
+.campo__field {
+    width: 55%;
+    border-radius: 1rem;
+    border: none;
+    margin: 0 6rem 0 1.9rem;
+}
+@media (min-width: 480px) {
+    .campo__field {
+        margin: 0 auto;
+    }
+}
+.campo__field--textarea {
+    width: 55%;
+    margin: 0 6rem -1rem 0rem;
+    height: 9rem;
+}
+@media (min-width: 480px) {
+    .campo__field--textarea {
+        height: 20rem;
+        margin: 0 auto;
+    }
+}
+.boton {
+    display: flex;
+    border-radius: 1.5rem;
+    padding: 0.4rem;
+    margin: 2rem auto -4rem ;
+    border: none;
+}   
+@media (min-width: 480px) {
+    .boton {
+        padding: 1rem;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+    border: 2px solid var(--violeta);
+    color: var(--violeta);
+}
+
+/* Carrito */
+
+#carrito{
+    display: none;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    height: auto;
+    width: auto;
+    background-color: var(--blanco);
+    z-index: 1001;
+}
+
+.card-body {
+    display: grid;
+}
+
+.btn {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.card {
+    width: 30rem;
+    border-radius: 5px;
+}
+.card:hover {
+    box-shadow: 0px 0px 10px 3px var(--grisClaro);
+}
+.card-img-top {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.img-carrito {
+    width: 100px;
+    height: 100px;
+}
+.info-carrito {
+    font-size: 1.4rem;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-family: 'Patua One', cursive;
+    padding-left: 4px;
+    border-left: thick solid #000;
+    
+}
+tfoot {
+    font-size: 1.5rem;
+}
+
+.toastify {
+    font-size: 1.5rem;
+    
+}
+
